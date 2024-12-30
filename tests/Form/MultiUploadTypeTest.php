@@ -43,7 +43,7 @@ class MultiUploadTypeTest extends TypeTestCase
         $form->configureOptions($optionResolver);
     }
 
-    protected function getExtensions()
+    protected function getExtensions(): array
     {
         $childType = new MultiUploadType();
 
