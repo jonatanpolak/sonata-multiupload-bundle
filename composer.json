@@ -14,15 +14,16 @@
         "oskarstark/symfony-http-responder": "^1.0.0",
         "sonata-project/admin-bundle": "^4.2",
         "sonata-project/media-bundle": "^4.1",
-        "symfony/twig-bridge": "^4.4 || ^5.3 || ^6.0",
-        "twig/twig": "^2.6 || ^3.3"
+        "symfony/twig-bridge": "^7.0",
+        "twig/twig": "^3.3"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.11",
-        "matthiasnoback/symfony-dependency-injection-test": "^4.3",
-        "phpunit/phpunit": "^9.5",
-        "symfony/phpunit-bridge": "^4.0",
-        "symfony/webpack-encore-bundle": "^1.12"
+        "friendsofphp/php-cs-fixer": "^3.66",
+        "matthiasnoback/symfony-dependency-injection-test": "^5.0",
+        "phpunit/phpunit": "^9.0",
+        "symfony/phpunit-bridge": "^7.0",
+        "symfony/webpack-encore-bundle": "^v2.0",
+        "webmozart/assert": "^1.11"
     },
     "config": {
         "sort-packages": true

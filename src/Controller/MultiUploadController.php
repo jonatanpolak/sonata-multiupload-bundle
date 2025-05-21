@@ -40,7 +40,7 @@ final class MultiUploadController extends CRUDController
         $form = $this->createMultiUploadForm($provider, $context);
 
         if (!$request->files->has('file')) {
-            return $this->renderWithExtraParams('@SonataMultiUpload/multi_upload.html.twig', [
+            return $this->render('@SonataMultiUpload/multi_upload.html.twig', [
                 'action' => 'multi_upload',
                 'form' => $form->createView(),
                 'provider' => $provider,

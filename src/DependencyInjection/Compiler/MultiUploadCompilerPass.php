@@ -16,22 +16,22 @@ final class MultiUploadCompilerPass implements CompilerPassInterface
     /**
      * {@inheritdoc}
      */
-    public function process(ContainerBuilder $container)
+    public function process(ContainerBuilder $container): void
     {
         $config = $container->getExtensionConfig('sonata_multi_upload');
 
-        $definiton = new Definition();
-        $definiton->setPublic(true);
-        $definiton->setClass(ProviderChain::class);
+        $definition = new Definition();
+        $definition->setPublic(true);
+        $definition->setClass(ProviderChain::class);
 
         foreach ($config[0]['providers'] as $providerName) {
             if (!$container->has($providerName)) {
                 throw new ServiceNotFoundException($providerName);
             }
 
-            $definiton->addMethodCall('addProvider', [new Reference($providerName)]);
+            $definition->addMethodCall('addProvider', [new Reference($providerName)]);
         }
 
-        $container->setDefinition($definiton->getClass(), $definiton);
+        $container->setDefinition($definition->getClass(), $definition);
     }
 }
